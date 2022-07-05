@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="container-fluid ">
+
+      <form class="form-control container padding-form" id="telaLogin">
+      <div class="container justify-content-center d-grid">
+        <h2 class="justify-content-center d-flex">Sign in</h2>
+        <p>Insert your Account information</p>
+      </div>
+
+        <!-- Input para colocar EMAIL -->
+        <div class=" mt-4 padding-form">
+          <input [(ngModel)]="requestLogin.email" type="email" class="form-control p-3 border-1 border-secondary" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username or Email">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+
+        <!-- Input para colocara SENHA -->
+        <div class="mb-3 mt-3 padding-form">
+          <input [(ngModel)]="requestLogin.password" type="password" class="form-control p-3 border-1 border-secondary " id="exampleInputPassword1" placeholder="Password">
+        </div>
+
+        <!-- clique para fazer LOGIN -->
+        <div class="padding-form d-grid gap-5">
+          <button (click)="doLogin()" type="submit" class="btn bg-account p-3 text-white">Login your Account</button>
+        </div>
+
+        <!-- clicando no link do email seria direcionado para a pagina de suporte emeplo: Um Forms para enviar diretamente o email com o problema -->
+        <p class="justify-content-center d-flex fs-6 pt-5">No Account? Send email to: <a href="" class="ms-1">fabio@tindin.com.br</a></p>
+      </form>
+
+</div>
+
+
+

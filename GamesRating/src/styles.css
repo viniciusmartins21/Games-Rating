@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.bg-red{
+  background-color: #FC4444
+}
+
+.bg-account{
+  background-color: #141414;
+}
+
+h1, h2{
+ font-family: 'Nunito', sans-serif;
+ font-weight:bolder;
+}
+
+p{
+  font-family: 'Nunito', sans-serif;
+  font-weight:600;
+}
+
+body{
+  background-color: #141414;
+}
