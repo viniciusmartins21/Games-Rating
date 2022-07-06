@@ -9,6 +9,8 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { DetalhesGameComponent } from './components/detalhes-game/detalhes-game.component';
 import { LoginComponent } from './components/login/login.component';
 import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inici
     CadastroComponent,
     DetalhesGameComponent,
     LoginComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

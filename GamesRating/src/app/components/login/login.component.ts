@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/User';
 import { UserService } from 'src/app/services/user.service';
 import { RequestLogin } from 'src/app/resources/models/RequestLogin';
+import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,12 @@ import { RequestLogin } from 'src/app/resources/models/RequestLogin';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  public requestLogin: RequestLogin = new RequestLogin();
+  public requestLogin: RequestLogin = new RequestLogin()
 
-  constructor(private loginService: UserService) {}
+  constructor(
+    private loginService: UserService,
+    private alertService: AlertService
+  ) {}
 
   ngOnInit(): void {
     this.requestLogin = new RequestLogin();
@@ -20,10 +24,13 @@ export class LoginComponent implements OnInit {
   public doLogin(): void {
     this.loginService.doLogin(this.requestLogin).subscribe(
       (data) => {
-        console.log(data);
+        this.alertService.info('titulo', 'Funcionalida em implementação');
       },
-      (error) => {
-        console.error(error);
+      (httpError) => {
+        this.alertService.error(
+          httpError.error.message,
+          'Incorrect username or passwords'
+        );
       }
     );
   }
