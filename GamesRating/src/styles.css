@@ -10,16 +10,19 @@
   background-color: #141414;
 }
 
-h1, h2{
+h1, h2, h3{
  font-family: 'Nunito', sans-serif;
  font-weight:bolder;
 }
 
 p{
   font-family: 'Nunito', sans-serif;
-  font-weight:600;
+  font-weight:500;
+  font-size: 1.1rem;
 }
 
 body{
   background-color: #141414;
 }
+
+

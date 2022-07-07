@@ -1,4 +1,4 @@
 export class RequestLogin {
-  public email: string = "";
-	public password: string = "";
+  public email: string = "master@tindin.com.br";
+	public password: string = "123";
 }

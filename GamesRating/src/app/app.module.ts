@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { DetalhesGameComponent } from './components/detalhes-game/detalhes-game.component';
-import { LoginComponent } from './components/login/login.component';
-import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial.component';
+import { DetalhesGameComponent } from './components/pages/detalhes-game/detalhes-game.component';
+import { LoginComponent } from './components/pages/login/login.component';
+import { PaginaInicialComponent } from './components/pages/pagina-inicial/pagina-inicial.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NewGameComponent } from './components/pages/new-game/new-game.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,15 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     HeaderComponent,
     FooterComponent,
+    NewGameComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    FontAwesomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

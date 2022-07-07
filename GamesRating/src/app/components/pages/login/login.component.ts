@@ -10,7 +10,7 @@ import { AlertService } from 'src/app/services/alert.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  public requestLogin: RequestLogin = new RequestLogin()
+  public requestLogin: RequestLogin = new RequestLogin();
 
   constructor(
     private loginService: UserService,
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   public doLogin(): void {
     this.loginService.doLogin(this.requestLogin).subscribe(
       (data) => {
-        this.alertService.info('titulo', 'Funcionalida em implementação');
+        this.alertService.info('', 'Funcionalida em implementação');
       },
       (httpError) => {
         this.alertService.error(
