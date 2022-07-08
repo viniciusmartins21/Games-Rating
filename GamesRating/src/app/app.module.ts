@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewGameComponent } from './components/pages/new-game/new-game.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoggedHomeComponent } from './components/pages/logged-home/logged-home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     FooterComponent,
     NewGameComponent,
+    LoggedHomeComponent,
   ],
   imports: [
     BrowserModule,

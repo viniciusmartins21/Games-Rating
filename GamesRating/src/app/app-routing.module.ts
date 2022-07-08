@@ -7,15 +7,20 @@ import { NewGameComponent } from './components/pages/new-game/new-game.component
 import { PaginaInicialComponent } from './components/pages/pagina-inicial/pagina-inicial.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'home', component: PaginaInicialComponent },
-  { path: 'register game', component: CadastroComponent },
-  { path: 'list/:id', component: DetalhesGameComponent },
-  { path: 'games/new', component: NewGameComponent },
+  {
+    path: '',
+    component: PaginaInicialComponent,
+    children: [
+      { path: '', component: LoginComponent },
+      { path: 'register game', component: CadastroComponent },
+      { path: 'list/:id', component: DetalhesGameComponent },
+      { path: 'games/new', component: NewGameComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

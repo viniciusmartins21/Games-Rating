@@ -1,1 +1,22 @@
+.height{
+  height: 10%;
+  opacity: 0.4;
+}
 
+.w-rating{
+  width: 3.5rem;
+  height:3.5rem;
+  /* display: flexbox; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.game-note{
+  /* color:#fff; */
+  margin: 0;
+  position:relative;
+  bottom:170px;
+  left:240px;
+  /* display: block; */
+  display: grid;
+}
